@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('unable to find the location',undefined);
         } else {   
             const {current} = body
-            callback(undefined, current.weather_descriptions[0] + '. It is '+ current.temperature + ' degree out here, but it feels like ' + current.feelslike + ' degrees.');
+            callback(undefined, current.weather_descriptions[0] + '. It is '+ current.temperature + ' degree out here, but it feels like ' + current.feelslike + ' degrees. The humidity is ' +  body.current.humidity +'%');
         }
     });
 }
