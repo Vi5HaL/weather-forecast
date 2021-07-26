@@ -1,7 +1,7 @@
 const request = require('postman-request');
 
 const forecast = (latitude, longitude, callback) => {
-    const url = 'http://api.weatherstack.com/current?access_key=fdffbc544d681552de4b1a95a264afe5&query='+latitude+','+longitude+'&units=f';
+    const url = 'http://api.weatherstack.com/current?access_key=fdffbc544d681552de4b1a95a264afe5&query='+latitude+','+longitude;
     request({ url, json: true}, (error,{body}) =>{
         if (error){
             callback('weather stack API is not reachable !',undefined)
